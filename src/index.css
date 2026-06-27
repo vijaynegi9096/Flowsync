@@ -113,5 +113,74 @@ code {
         border-bottom-color: inherit;
     }
 }
+/* =========================================================
+   CUSTOM UTILITY CLASSES
+   ========================================================= */
 
+.gradient-text {
+    background: linear-gradient(135deg, #00D084 0%, #2563EB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-bg {
+    background: radial-gradient(
+        ellipse 80% 60% at 50% -10%,
+        rgba(37, 99, 235, 0.18) 0%,
+        rgba(0, 208, 132, 0.08) 40%,
+        transparent 70%
+    ),
+    #0B1120;
+}
+
+.grid-bg {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-strong {
+    background: rgba(11, 17, 32, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.font-display {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@keyframes dash {
+    to { stroke-dashoffset: -24; }
+}
+.animate-dash {
+    animation: dash 1.2s linear infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; box-shadow: 0 0 4px #00D084; }
+    50% { opacity: 0.5; box-shadow: 0 0 12px #00D084; }
+}
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
 
