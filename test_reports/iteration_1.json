@@ -1,0 +1,43 @@
+
+{
+  "summary": "Frontend-only smoke test of FlowSync landing page. Page loads with no console errors. Navbar, Hero (with animated dashboard), 6 Features, 4 Stats, 4 Benefits, 6 Testimonials, 3 Pricing plans with working monthly/yearly toggle (₹999/₹2,999 monthly, ₹799/₹2,399 yearly, Enterprise Custom), all 5 FAQ accordion triggers, and mobile menu (5 links + login + trial) all verified. Pricing nav link smoothly scrolls to #pricing. No horizontal scroll on mobile (390px). Two issues found: invalid-email toast is suppressed by HTML5 native validation, and 'Most Popular' badge text is actually 'Most popular' (lowercase p) - spec mismatch.",
+  "tested_scope": ["frontend"],
+  "passed": [
+   "landing-page renders with no console errors",
+   "Navbar with 5 desktop links + Login + Start Free Trial",
+   "Hero: 'Automate Workflows' headline, trial+demo buttons, hero-dashboard mockup",
+   "Features: 6 feature-card-0..5",
+   "Stats: 50,000+, 99.99%, 120M, 40%",
+   "Benefits: 4 cards (Save Time, Reduce Costs, Improve Collaboration, Scale Faster)",
+    "Testimonials: 6 cards (testimonial-0..5)",
+    "Pricing: starter, pro, enterprise cards present",
+    "Billing toggle: yearly shows ₹799 & ₹2,399; monthly shows ₹999 & ₹2,999; Enterprise Custom",
+    "FAQ: all 5 triggers (faq-trigger-0..4) clickable/expand",
+    "Newsletter: valid email clears input after submit",
+    "Mobile (390x844): mobile-menu-toggle opens menu with 5 links + mobile-login-btn + mobile-trial-btn",
+    "Mobile: no horizontal scroll (scrollWidth=clientWidth=390)",
+    "Pricing nav link smooth-scrolls to #pricing section"
+  ],
+  "failed": [
+    {
+      "area": "Footer newsletter validation",
+      "issue": "Submitting an invalid email like 'notanemail' triggers the browser's native HTML5 email validation tooltip ('Please include an @...'), which prevents the form's onSubmit handler from running. As a result, toast.error('Please enter a valid email address.') in Footer.jsx is never shown. Spec requires that invalid email shows an error toast.",
+      "evidence": "Screenshot shows native browser tooltip popup; sonner toaster section is empty (<section aria-label='Notifications...'></section>). Footer.jsx line 30 contains toast.error but is unreachable due to <input type='email' required>.",
+      "priority": "MEDIUM"
+  },
+    {
+      "area": "Pricing badge text",
+      "issue": "Spec requires 'Most Popular' badge but Pricing.jsx renders 'Most popular' (lowercase p). Badge IS visible on Pro plan but text casing differs from spec.",
+      "evidence": "grep on Pricing.jsx line 144: '<Sparkles ... /> Most popular'",
+      "priority": "LOW"
+    }
+  ],
+  "action_items": [
+    "Footer.jsx: change <input type='email'> to type='text' (or add noValidate on the form) so the custom regex check + toast.error fires for invalid emails like 'notanemail'.",
+    "Pricing.jsx line 144: change 'Most popular' to 'Most Popular' to match the spec exactly (optional/cosmetic)."
+  ],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "93%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
+

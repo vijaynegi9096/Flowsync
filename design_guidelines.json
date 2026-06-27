@@ -1,0 +1,175 @@
+{
+  "theme_and_archetype": {
+    "domain": "AI Workflow Automation SaaS",
+    "theme": "DARK",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 7 (Electric Accents)",
+    "reasoning": "The product is an AI enterprise workflow tool that requires strong authority, clarity, and precision (Archetype 4), combined with the premium 'techno-futurist' dark mode aesthetic requested by the user. We will use the deep matte space background as the anchor, relying on the vibrant green and royal blue solely as kinetic triggers and data highlighters."
+  },
+  "typography": {
+    "strategy": "The Anti-Default Rule: Avoiding Inter and Roboto to achieve a distinctive, premium techno-editorial feel.",
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["300", "400", "600"],
+      "usage": "Use tight letter-spacing (tracking-tight or tracking-tighter) for all headers above 32px. Outfit provides geometric clarity while retaining subtle warmth, perfectly mirroring the Linear/Vercel precision without the cliché.",
+      "scales": {
+        "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter font-medium",
+        "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-medium",
+        "h3": "text-2xl sm:text-3xl tracking-tight font-medium",
+        "h4": "text-lg sm:text-xl font-medium"
+      }
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use leading-relaxed for long-form text. Manrope provides exceptional legibility at small sizes, pairing perfectly with Outfit.",
+      "scales": {
+        "large": "text-lg sm:text-xl leading-relaxed",
+        "base": "text-base leading-relaxed",
+        "small": "text-sm leading-normal",
+        "overline": "text-xs tracking-[0.2em] uppercase font-bold"
+      }
+    }
+  },
+  "color_system": {
+    "background": {
+      "default": "#0B1120",
+      "surface": "rgba(255, 255, 255, 0.03)",
+      "surface_hover": "rgba(255, 255, 255, 0.06)",
+      "surface_elevated": "rgba(11, 17, 32, 0.7)"
+    },
+    "brand": {
+      "primary": "#00D084",
+      "primary_glow": "rgba(0, 208, 132, 0.2)",
+      "secondary": "#2563EB",
+      "secondary_glow": "rgba(37, 99, 235, 0.2)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "inverse": "#0B1120"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "strong": "rgba(255, 255, 255, 0.2)",
+      "focus": "#00D084"
+    },
+    "gradients": {
+      "hero_bg": "radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.15) 0%, rgba(11, 17, 32, 0) 60%), radial-gradient(circle at 80% 40%, rgba(0, 208, 132, 0.1) 0%, rgba(11, 17, 32, 0) 50%)",
+      "text_accent": "linear-gradient(135deg, #00D084 0%, #2563EB 100%)",
+      "tracing_beam": "linear-gradient(to bottom, transparent, #00D084, transparent)"
+    }
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing & Tension. Use large paddings to let elements breathe. Avoid completely centered pages; rely on bento grids and asymmetric layouts.",
+    "container": "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12",
+    "section_padding": "py-24 sm:py-32",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "card_padding": "p-8 lg:p-10"
+  },
+  "surfaces_and_glassmorphism": {
+    "crystal_glass": {
+      "classes": "backdrop-blur-xl bg-[#0B1120]/70 border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+      "usage": "Navbar, floating widget cards in the hero mockup, tooltips, and modal overlays."
+    },
+    "neo_tactile": {
+      "classes": "bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300",
+      "usage": "Feature cards, Pricing standard tiers, Benefit panels."
+    },
+    "tracing_beam_card": {
+      "classes": "relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/10 shadow-[0_0_40px_rgba(37,99,235,0.1)]",
+      "inner_glow": "absolute inset-0 bg-gradient-to-br from-[#2563EB]/10 to-transparent opacity-50",
+      "usage": "The 'Pro' Pricing tier and the primary Dashboard Mockup container."
+    }
+  },
+  "motion_and_interactions": {
+    "philosophy": "Fluid, purposeful motion. No bouncy/distracting effects. Animations should feel like precision engineering.",
+    "hover_states": "All buttons: transform scale-[1.02] active:scale-[0.98]. Cards: subtle translateY(-4px) and border-color shift.",
+    "framer_motion_defaults": {
+      "spring": "{ type: 'spring', stiffness: 100, damping: 20 }",
+      "stagger": "{ staggerChildren: 0.1 }",
+      "entrance": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#00D084] text-[#0B1120] font-semibold hover:bg-[#00D084]/90 transition-all shadow-[0_0_20px_rgba(0,208,132,0.3)] hover:shadow-[0_0_30px_rgba(0,208,132,0.5)] rounded-full px-6 py-3",
+      "secondary": "bg-white/[0.05] text-white font-semibold hover:bg-white/[0.1] border border-white/10 transition-all rounded-full px-6 py-3",
+      "ghost": "text-[#94A3B8] hover:text-white transition-colors px-4 py-2"
+    },
+    "badges": "inline-flex items-center rounded-full border border-[#2563EB]/30 bg-[#2563EB]/10 px-3 py-1 text-sm font-medium text-[#2563EB]"
+  },
+  "section_details": {
+    "navbar": {
+      "layout": "Fixed top-0 w-full z-50. Crystal glassmorphism.",
+      "elements": "Logo (Text FlowSync with Sync colored #00D084), Center links (Features, Pricing, FAQ), Right CTA (Login ghost, Start Free Trial primary)."
+    },
+    "hero": {
+      "layout": "Min-h-screen flex flex-col items-center justify-center pt-32 pb-20 text-center relative overflow-hidden.",
+      "background": "Deep space background with radial gradients of #2563EB and #00D084.",
+      "typography": "Overline badge ('v2.0 is live'), H1 'Automate Workflows with AI' (AI wrapped in text-transparent bg-clip-text bg-gradient-to-r from-[#00D084] to-[#2563EB]), subtitle in text-xl text-[#94A3B8] max-w-2xl.",
+      "ctas": "Primary 'Start Free Trial', Secondary 'Book Demo' with Play icon.",
+      "trust_badges": "Below the hero dashboard, text 'Trusted by engineering teams at', followed by a row of grayscale/opacity-50 logos (Lucide icons like Command, Hexagon, Triangle as stand-ins for companies, or text logos)."
+    },
+    "animated_dashboard_spec": {
+      "wrapper": "A massive 16:9 rounded-2xl border border-white/10 bg-[#0B1120]/50 backdrop-blur-md shadow-2xl relative mt-16 max-w-5xl mx-auto overflow-hidden",
+      "header": "Mac-like top bar with 3 dots (red, yellow, green) and a subtle search bar.",
+      "sidebar": "Left 64px width, border-r border-white/10, stacked skeleton icons.",
+      "canvas": "The main area features an 'AI Workflow Graph'. Use Framer Motion to draw SVG paths connecting node cards. Nodes are small frosted glass cards containing Lucide icons (Database, Cpu, Zap, Cloud).",
+      "animations": "1. Connecting lines have an animated strokeDashoffset. 2. A floating widget overlapping the bottom right corner (absolute position, z-10) showing 'Real-time Analytics' with a pulsing green dot and an upward trending SVG line chart (color #00D084)."
+    },
+    "features": {
+      "layout": "Grid cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6. The 'Bento Grid'.",
+      "cards": "Neo-tactile surface. Icon at the top left in a rounded-lg bg-white/5 p-3 text-[#00D084], followed by H4 heading, then text-[#94A3B8] body. Add a subtle hover effect where a radial glow follows the mouse (or just a generic group-hover opacity transition)."
+    },
+    "statistics": {
+      "layout": "Full width, border-y border-white/10 bg-white/[0.02] py-16.",
+      "content": "4 columns. Massive numbers (text-5xl font-medium text-white) over small labels (text-[#94A3B8] uppercase tracking-widest). Numbers: 50,000+, 99.99%, 120M, 40%."
+    },
+    "benefits": {
+      "layout": "Alternating side-by-side (Image/Graphic on one side, Text on the other). Focus heavily on typography.",
+      "graphics": "Instead of real images, use abstract CSS/Framer Motion shapes or high-quality stylized UI components (e.g., a stacked bar chart built with divs for 'Reduce Costs')."
+    },
+    "testimonials": {
+      "layout": "3 columns bento layout.",
+      "card": "Crystal glass styling. Quote icon, paragraph text, 5 green stars, user avatar + name + role.",
+      "avatars": "Use the provided media URLs."
+    },
+    "pricing": {
+      "layout": "3 columns. Monthly/Yearly toggle at the top.",
+      "cards": "Starter, Pro, Enterprise. Pro card must be scaled up slightly (scale-105 on desktop) with the `tracing_beam_card` styling. Primary button for Pro, secondary buttons for others."
+    },
+    "faq": {
+      "layout": "Max-w-3xl mx-auto.",
+      "component": "Shadcn Accordion. Customize to have transparent background, border-b border-white/10, white text for trigger, #94A3B8 text for content. Remove generic ring focus, replace with text-[#00D084] on hover."
+    },
+    "footer": {
+      "layout": "4 columns top (Brand/Newsletter, Links, Links, Links). Massive bottom text 'FLOWSYNC'.",
+      "styling": "Text-[#94A3B8] for links, hover:text-white. Newsletter input: bg-white/5 border border-white/10 rounded-lg p-2 focus:border-[#00D084]."
+    }
+  },
+  "media_urls": {
+    "testimonial_avatars": [
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MjU1MDg4M3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1607503873903-c5e95f80d7b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MjU1MDg4M3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MjU1MDg4M3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MjU1MDg4M3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/31869537/pexels-photo-31869537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.pexels.com/photos/26872232/pexels-photo-26872232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ],
+    "company_logos": [
+      "https://images.unsplash.com/photo-1764344815160-0e2afc6939a0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nbyUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODI1NDc2ODF8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/21898300/pexels-photo-21898300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.unsplash.com/photo-1688220019316-3e22587dd158?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwzfHx3aGl0ZSUyMG1pbmltYWxpc3QlMjBsb2dvJTIwb24lMjBibGFjayUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzgyNTUwOTA3fDA&ixlib=rb-4.1.0&q=85",
+      "https://images.pexels.com/photos/26576975/pexels-photo-26576975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: All components, marketing sections, and layouts MUST use standard HTML elements (`div`, `section`) combined with Tailwind CSS. DO NOT use Shadcn Card components for layout or feature grids; they limit creative flexibility. Only use Shadcn for complex interactive functionality (Accordion, Toggle, Dialog).",
+    "CRITICAL: Use Lucide React icons for the trust badges in the Hero section (e.g., Hexagon, Triangle, Command) layered with text like 'Acme Corp' rather than raw images, ensuring perfect SVGs for a dark mode site. Use the provided company_logo urls as a fallback if you need img tags.",
+    "CRITICAL: Apply `data-testid` to all interactive and key informational elements (buttons, links, pricing toggles, accordion triggers).",
+    "CRITICAL: Ensure the mobile menu uses a crystal glassmorphism overlay (`backdrop-blur-2xl bg-[#0B1120]/90`).",
+    "CRITICAL: The hero dashboard MUST be built out of actual HTML/CSS/Framer Motion DOM elements, NOT a static image. It should look like a functional, high-end SaaS product interface, representing an 'AI Workflow Graph'.",
+    "Install Google Fonts in index.html or global CSS: Outfit (300, 400, 600) and Manrope (400, 500)."
+  ]
+}
+
